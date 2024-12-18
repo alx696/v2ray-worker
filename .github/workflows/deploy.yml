@@ -1,10 +1,7 @@
 name: Deploy Worker
 
 on:
-  workflow_run:
-    workflows: [Build worker.js]
-    types:
-      - completed
+  repository_dispatch:
 
 jobs:
   deploy:
